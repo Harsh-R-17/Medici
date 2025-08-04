@@ -136,8 +136,19 @@ The Medici library automatically creates the following collections in MongoDB:
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET    | `/`      | Create sample transaction and return success status |
+| GET    | `/ping`  | Health check endpoint - returns "Hello world" |
+| GET    | `/business-info` | Get business configuration and Medanta business ID |
 
 *Note: This is a basic implementation. Additional endpoints can be added for full CRUD operations.*
+
+### Business Configuration
+
+The system is configured with Medanta business information:
+- **Business ID**: `b-165935897059530`
+- **Business Name**: Medanta
+- **System**: Medici Credit System
+
+All transactions automatically include the business ID in their metadata for proper tracking and identification.
 
 ## 🚦 Development
 
