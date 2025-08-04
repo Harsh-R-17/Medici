@@ -46,6 +46,10 @@ app.get("/", async (req, res) => {
   }
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).json({ message: "Hello world" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
